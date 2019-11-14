@@ -6,7 +6,7 @@ library(tidycensus)
 library(urbnmapr)
 library(tigris)
 library(leaflet)
-
+library(mapview)
 
 full_acs_2017 <- load_variables(2017, "acs5", cache = TRUE)
 
