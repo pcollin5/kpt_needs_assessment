@@ -192,3 +192,11 @@ View(dp_table_variables)
 ####so heres all the data
     
     
+    dp02_all_counties <- rbind(Carter_dp02, Greene_dp02, Hancock_dp02, Hawkins_dp02, Johnson_dp02, Sullivan_dp02, Washington_dp02, Unicoi_dp02)
+
+    dp03_all_counties <- rbind(Carter_dp03, Greene_dp03, Hancock_dp03, Hawkins_dp03, Johnson_dp03, Sullivan_dp03, Washington_dp03, Unicoi_dp03)
+    
+    dp04_all_counties <- rbind(Carter_dp04, Greene_dp04, Hancock_dp04, Hawkins_dp04, Johnson_dp04, Sullivan_dp04, Washington_dp04, Unicoi_dp04)
+    
+    dp05_all_counties <- rbind(Carter_dp05, Greene_dp05, Hancock_dp05, Hawkins_dp05, Johnson_dp05, Sullivan_dp05, Washington_dp05, Unicoi_dp05)
+    

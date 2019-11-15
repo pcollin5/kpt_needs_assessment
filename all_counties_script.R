@@ -42,3 +42,15 @@ races %>%
   filter(variable == "S1701_C03_014") %>%
   tm_shape() +
   tm_polygons()
+
+
+
+###whatever
+
+head(uethda_2017)
+
+median_income <- uethda_2017 %>%
+  filter(variable == "DP03_0062")
+
+head(median_income)
+mapview(median_income)
