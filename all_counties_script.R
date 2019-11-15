@@ -10,12 +10,19 @@ all_under_5 <- uethda_2017 %>%
   filter(variable == "S1701_C03_003") %>%
   mutate("Age < 5 Percent in Poverty" = estimate)
 
-mapview(all_under_5, zcol = "Age < 5 Percent in Poverty", legend = TRUE)
+
+
+all_counties <- mapview(all_under_5, zcol = "Age < 5 Percent in Poverty", legend = TRUE)
+
+mapshot(all_counties, file = paste0(getwd(), "/all_counties_under_5.png"),
+        remove_controls = c("homeButton", "layersControl"))
+
+
 
 races <- uethda_2017 %>%
   filter(variable == "S1701_C03_013" | variable == "S1701_C03_014" | variable == "S1701_C03_015" | variable == "S1701_C03_016" | variable == "S1701_C03_017" | variable == "S1701_C03_018"
          | variable == "S1701_C03_019" | variable == "S1701_C03_020" | variable == "S1701_C03_021") 
-mapview(races)
+mapview(races, zcol = "variable", legend = TRUE)
 
 ggplot(races, aes(fill = estimate))+
   geom_sf()+
@@ -24,3 +31,14 @@ ggplot(races, aes(fill = estimate))+
 races %>%
   group_by(variable) %>%
   count()
+
+library(tmap)
+library(tidyverse)
+
+qtm(races)
+tm_shape(races)+tm_borders() + tm_fill(races$variable == "S1701_C03_014")
+
+races %>%
+  filter(variable == "S1701_C03_014") %>%
+  tm_shape() +
+  tm_polygons()

@@ -8,6 +8,7 @@ library(tigris)
 library(leaflet)
 library(mapview)
 
+
 full_acs_2017 <- load_variables(2017, "acs5", cache = TRUE)
 
 
@@ -218,4 +219,11 @@ under_5 <- sc_s1701_2017 %>%
   filter(variable == "S1701_C03_003") %>%
   mutate("Under 5 Percent in Poverty" = estimate)
 
-mapview(under_5, zcol = "Under 5 Percent in Poverty", legend = TRUE)
+poverty_map_under_5 <- mapview(under_5, zcol = "Under 5 Percent in Poverty", legend = TRUE)
+mapshot(poverty_map_under_5, file = child_poverty_map.png)
+
+?mapshot
+mapshot(poverty_map_under_5, file = paste0(getwd(), "/map.png"),
+        remove_controls = c("homeButton", "layersControl"))
+
+webshot::install_phantomjs()
