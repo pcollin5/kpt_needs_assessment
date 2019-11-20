@@ -8,11 +8,17 @@ library(urbnmapr)
 library(tigris)
 library(leaflet)
 library(mapview)
+library(tmap)
+library(gganimate)
 
 ####need variables####
 dp_table_variables <- load_variables(2017, "acs5/profile", cache = TRUE)
 
 View(dp_table_variables)
+
+new_names <- c("variable", "label", "concept")
+
+names(dp_table_variables) <- new_names
 
 ##varibales need new names to join and maker better##
 
@@ -986,3 +992,52 @@ View(dp_table_variables)
     dim(data_profile)
     
 ####now actually play with the data####
+
+    data_profile %>%
+      filter(variable == "DP02_0040")%>%
+      group_by(NAME) %>%
+      summarise(mean(estimate))
+      
+    
+    foriegn_born <- data_profile %>%
+                      filter(variable == "DP02_0092P") %>%
+                      group_by(year, NAME)
+    
+    test <-ggplot(foriegn_born, aes(fill = estimate))+
+      geom_sf()+
+      labs(title = "Year: {frame}")+
+      transition_manual(year)+
+      ease_aes('linear')
+    
+    test
+    
+    test2 <- ggplot(foriegn_born)+
+      geom_sf(aes(fill = estimate, group = year))+
+      labs(title = "Year: {frame_time}", fill = "Percent Population Born Outside of US")+
+      transition_time(year)
+  
+    animate(test2, height = 1500, width = 1000)
+    anim_save("test2.gif")
+    
+    ###it works but it needs to stay on the last frame longer###
+    
+    
+    
+    test2 
+   ?transition_time
+    
+    install.packages("transformr")
+    install.packages("png")
+    install.packages("gifski")
+    
+   length(foriegn_born$year)
+  590/5
+  dim(foriegn_born %>%
+    filter(year == 2017))
+  length(foriegn_born$average_people_not_born_in_us)
+  
+  foriegn_born %>%
+    group_by(NAME) %>%
+    summarize(count = n())
+  
+  sessionInfo()
