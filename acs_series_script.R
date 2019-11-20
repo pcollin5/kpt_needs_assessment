@@ -858,4 +858,58 @@ Unicoi_dp04_13 <- inner_join(Unicoi_dp04_2013, dp_table_variables, by = "variabl
 Unicoi_dp05_13 <- inner_join(Unicoi_dp05_2013, dp_table_variables, by = "variable")
 
 
+####combine all the counties into their respective data tables####
 
+####2017####
+
+dp02_17 <- rbind(Carter_dp02_17, Greene_dp02_17, Hancock_dp02_17, Hawkins_dp02_17, Johnson_dp02_17, Sullivan_dp02_17, Washington_dp02_17, Unicoi_dp02_17)
+
+dp03_17 <- rbind(Carter_dp03_17, Greene_dp03_17, Hancock_dp03_17, Hawkins_dp03_17, Johnson_dp03_17, Sullivan_dp03_17, Washington_dp03_17, Unicoi_dp03_17)
+
+dp04_17 <- rbind(Carter_dp04_17, Greene_dp04_17, Hancock_dp04_17, Hawkins_dp04_17, Johnson_dp04_17, Sullivan_dp04_17, Washington_dp04_17, Unicoi_dp04_17)
+
+dp05_17 <- rbind(Carter_dp05_17, Greene_dp05_17, Hancock_dp05_17, Hawkins_dp05_17, Johnson_dp05_17, Sullivan_dp05_17, Washington_dp05_17, Unicoi_dp05_17)
+
+####2016####
+
+dp02_16 <- rbind(Carter_dp02_16, Greene_dp02_16, Hancock_dp02_16, Hawkins_dp02_16, Johnson_dp02_16, Sullivan_dp02_16, Washington_dp02_16, Unicoi_dp02_16)
+
+dp03_16 <- rbind(Carter_dp03_16, Greene_dp03_16, Hancock_dp03_16, Hawkins_dp03_16, Johnson_dp03_16, Sullivan_dp03_16, Washington_dp03_16, Unicoi_dp03_16)
+
+dp04_16 <- rbind(Carter_dp04_16, Greene_dp04_16, Hancock_dp04_16, Hawkins_dp04_16, Johnson_dp04_16, Sullivan_dp04_16, Washington_dp04_16, Unicoi_dp04_16)
+
+dp05_16 <- rbind(Carter_dp05_16, Greene_dp05_16, Hancock_dp05_16, Hawkins_dp05_16, Johnson_dp05_16, Sullivan_dp05_16, Washington_dp05_16, Unicoi_dp05_16)
+
+####2015####
+
+dp02_15 <- rbind(Carter_dp02_15, Greene_dp02_15, Hancock_dp02_15, Hawkins_dp02_15, Johnson_dp02_15, Sullivan_dp02_15, Washington_dp02_15, Unicoi_dp02_15)
+
+dp03_15 <- rbind(Carter_dp03_15, Greene_dp03_15, Hancock_dp03_15, Hawkins_dp03_15, Johnson_dp03_15, Sullivan_dp03_15, Washington_dp03_15, Unicoi_dp03_15)
+
+dp04_15 <- rbind(Carter_dp04_15, Greene_dp04_15, Hancock_dp04_15, Hawkins_dp04_15, Johnson_dp04_15, Sullivan_dp04_15, Washington_dp04_15, Unicoi_dp04_15)
+
+dp05_15 <- rbind(Carter_dp05_15, Greene_dp05_15, Hancock_dp05_15, Hawkins_dp05_15, Johnson_dp05_15, Sullivan_dp05_15, Washington_dp05_15, Unicoi_dp05_15)
+
+####2014####
+
+dp02_14 <- rbind(Carter_dp02_14, Greene_dp02_14, Hancock_dp02_14, Hawkins_dp02_14, Johnson_dp02_14, Sullivan_dp02_14, Washington_dp02_14, Unicoi_dp02_14)
+
+dp03_14 <- rbind(Carter_dp03_14, Greene_dp03_14, Hancock_dp03_14, Hawkins_dp03_14, Johnson_dp03_14, Sullivan_dp03_14, Washington_dp03_14, Unicoi_dp03_14)
+
+dp04_14 <- rbind(Carter_dp04_14, Greene_dp04_14, Hancock_dp04_14, Hawkins_dp04_14, Johnson_dp04_14, Sullivan_dp04_14, Washington_dp04_14, Unicoi_dp04_14)
+
+dp05_14 <- rbind(Carter_dp05_14, Greene_dp05_14, Hancock_dp05_14, Hawkins_dp05_14, Johnson_dp05_14, Sullivan_dp05_14, Washington_dp05_14, Unicoi_dp05_14)
+
+####2013####
+
+dp02_13 <- rbind(Carter_dp02_13, Greene_dp02_13, Hancock_dp02_13, Hawkins_dp02_13, Johnson_dp02_13, Sullivan_dp02_13, Washington_dp02_13, Unicoi_dp02_13)
+
+dp03_13 <- rbind(Carter_dp03_13, Greene_dp03_13, Hancock_dp03_13, Hawkins_dp03_13, Johnson_dp03_13, Sullivan_dp03_13, Washington_dp03_13, Unicoi_dp03_13)
+
+dp04_13 <- rbind(Carter_dp04_13, Greene_dp04_13, Hancock_dp04_13, Hawkins_dp04_13, Johnson_dp04_13, Sullivan_dp04_13, Washington_dp04_13, Unicoi_dp04_13)
+
+dp05_13 <- rbind(Carter_dp05_13, Greene_dp05_13, Hancock_dp05_13, Hawkins_dp05_13, Johnson_dp05_13, Sullivan_dp05_13, Washington_dp05_13, Unicoi_dp05_13)
+
+####have to fix the names eventually####
+
+View(dp_table_variables)
