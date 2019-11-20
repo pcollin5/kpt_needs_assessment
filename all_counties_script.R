@@ -1,3 +1,17 @@
+library(acs)
+library(tidyverse)
+library(tidycensus)
+library(urbnmapr)
+library(tigris)
+library(leaflet)
+library(mapview)
+
+
+
+
+
+
+
 counties_served <- c("Carter County", "Greene County", "Hancock County", "Hawkins County", "Johnson County", "Sullivan County", "Washington County", "Unicoi County")
 
 counties_tract <- get_acs(geography = "tract", county = counties_served, state = "TN", table = "S1701", year = 2017, geometry = TRUE, summary_var = "S0101_C01_001")
