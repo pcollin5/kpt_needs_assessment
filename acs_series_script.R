@@ -1021,14 +1021,8 @@ View(dp_table_variables)
     
     ###it works but it needs to stay on the last frame longer###
     
+    data_profile 
     
-    
-    test2 
-   ?transition_time
-    
-    install.packages("transformr")
-    install.packages("png")
-    install.packages("gifski")
     
    length(foriegn_born$year)
   590/5
@@ -1041,3 +1035,19 @@ View(dp_table_variables)
     summarize(count = n())
   
   sessionInfo()
+
+  
+  ###divorced guys###
+  names(data_profile)
+  
+  my_wife_left_me <- data_profile %>%
+    filter(variable == "DP02_0029P")
+  
+  wife_plot <-ggplot(my_wife_left_me)+
+    geom_sf(aes(fill = estimate, group = year))+
+    labs(title = "Year: {as.integer(frame_time)}", fill = "% Men who's wife left them")+
+    transition_time(year)
+
+  animate(wife_plot, end_pause = 10, height = 2000, width = 1500)  
+  anim_save("my_wife_left_me.gif")
+  
