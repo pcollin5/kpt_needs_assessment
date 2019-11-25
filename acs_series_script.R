@@ -1,6 +1,7 @@
 ###data for the past 5 years of acs to show trends###
 
 ####load packages####
+
 library(acs)
 library(tidyverse)
 library(tidycensus)
@@ -1050,4 +1051,6 @@ View(dp_table_variables)
 
   animate(wife_plot, end_pause = 10, height = 2000, width = 1500)  
   anim_save("my_wife_left_me.gif")
+  
+  
   
