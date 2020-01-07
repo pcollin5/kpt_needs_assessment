@@ -5,7 +5,6 @@
 library(acs)
 library(tidyverse)
 library(tidycensus)
-library(urbnmapr)
 library(tigris)
 library(leaflet)
 library(mapview)
@@ -991,7 +990,1015 @@ View(dp_table_variables)
     data_profile <- rbind(dp_2017, dp_2016, dp_2015, dp_2014, dp_2013)
 
     dim(data_profile)
+
+####need to get county level data for comparisons within the stupid county####
+    ### should get overall county totals for comparison within that county 
     
+   #Carter
+    
+    #2017
+    
+    Carter_County_dp02_2017 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+     
+    Carter_County_dp03_2017 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Carter_County_dp04_2017 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Carter_County_dp05_2017 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Carter_County_dp02_2016 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Carter_County_dp03_2016 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Carter_County_dp04_2016 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Carter_County_dp05_2016 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Carter_County_dp02_2015 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Carter_County_dp03_2015 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Carter_County_dp04_2015 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Carter_County_dp05_2015 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Carter_County_dp02_2014 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Carter_County_dp03_2014 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Carter_County_dp04_2014 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Carter_County_dp05_2014 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Carter_County_dp02_2013 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Carter_County_dp03_2013 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Carter_County_dp04_2013 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Carter_County_dp05_2013 <- get_acs(geography = "county", county = "Carter", state = "TN", table = "DP05", year = 2013, geometry = TRUE)
+    
+    #Greene
+    
+    #2017
+    
+    Greene_County_dp02_2017 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Greene_County_dp03_2017 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Greene_County_dp04_2017 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Greene_County_dp05_2017 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Greene_County_dp02_2016 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Greene_County_dp03_2016 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Greene_County_dp04_2016 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Greene_County_dp05_2016 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Greene_County_dp02_2015 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Greene_County_dp03_2015 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Greene_County_dp04_2015 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Greene_County_dp05_2015 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Greene_County_dp02_2014 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Greene_County_dp03_2014 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Greene_County_dp04_2014 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Greene_County_dp05_2014 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Greene_County_dp02_2013 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Greene_County_dp03_2013 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Greene_County_dp04_2013 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Greene_County_dp05_2013 <- get_acs(geography = "county", county = "Greene", state = "TN", table = "DP05", year = 2013, geometry = TRUE)      
+    
+    #Hancock
+    
+    #2017
+    
+    Hancock_County_dp02_2017 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Hancock_County_dp03_2017 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Hancock_County_dp04_2017 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Hancock_County_dp05_2017 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Hancock_County_dp02_2016 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Hancock_County_dp03_2016 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Hancock_County_dp04_2016 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Hancock_County_dp05_2016 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Hancock_County_dp02_2015 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Hancock_County_dp03_2015 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Hancock_County_dp04_2015 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Hancock_County_dp05_2015 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Hancock_County_dp02_2014 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Hancock_County_dp03_2014 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Hancock_County_dp04_2014 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Hancock_County_dp05_2014 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Hancock_County_dp02_2013 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Hancock_County_dp03_2013 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Hancock_County_dp04_2013 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Hancock_County_dp05_2013 <- get_acs(geography = "county", county = "Hancock", state = "TN", table = "DP05", year = 2013, geometry = TRUE)    
+    
+    #Hawkins
+    
+    #2017
+    
+    Hawkins_County_dp02_2017 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Hawkins_County_dp03_2017 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Hawkins_County_dp04_2017 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Hawkins_County_dp05_2017 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Hawkins_County_dp02_2016 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Hawkins_County_dp03_2016 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Hawkins_County_dp04_2016 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Hawkins_County_dp05_2016 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Hawkins_County_dp02_2015 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Hawkins_County_dp03_2015 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Hawkins_County_dp04_2015 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Hawkins_County_dp05_2015 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Hawkins_County_dp02_2014 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Hawkins_County_dp03_2014 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Hawkins_County_dp04_2014 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Hawkins_County_dp05_2014 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Hawkins_County_dp02_2013 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Hawkins_County_dp03_2013 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Hawkins_County_dp04_2013 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Hawkins_County_dp05_2013 <- get_acs(geography = "county", county = "Hawkins", state = "TN", table = "DP05", year = 2013, geometry = TRUE)
+    
+    #Johnson
+    
+    #2017
+    
+    Johnson_County_dp02_2017 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Johnson_County_dp03_2017 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Johnson_County_dp04_2017 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Johnson_County_dp05_2017 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Johnson_County_dp02_2016 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Johnson_County_dp03_2016 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Johnson_County_dp04_2016 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Johnson_County_dp05_2016 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Johnson_County_dp02_2015 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Johnson_County_dp03_2015 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Johnson_County_dp04_2015 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Johnson_County_dp05_2015 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Johnson_County_dp02_2014 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Johnson_County_dp03_2014 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Johnson_County_dp04_2014 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Johnson_County_dp05_2014 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Johnson_County_dp02_2013 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Johnson_County_dp03_2013 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Johnson_County_dp04_2013 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Johnson_County_dp05_2013 <- get_acs(geography = "county", county = "Johnson", state = "TN", table = "DP05", year = 2013, geometry = TRUE)  
+    
+    #Sullivan
+    
+    #2017
+    
+    Sullivan_County_dp02_2017 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Sullivan_County_dp03_2017 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Sullivan_County_dp04_2017 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Sullivan_County_dp05_2017 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Sullivan_County_dp02_2016 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Sullivan_County_dp03_2016 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Sullivan_County_dp04_2016 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Sullivan_County_dp05_2016 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Sullivan_County_dp02_2015 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Sullivan_County_dp03_2015 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Sullivan_County_dp04_2015 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Sullivan_County_dp05_2015 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Sullivan_County_dp02_2014 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Sullivan_County_dp03_2014 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Sullivan_County_dp04_2014 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Sullivan_County_dp05_2014 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Sullivan_County_dp02_2013 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Sullivan_County_dp03_2013 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Sullivan_County_dp04_2013 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Sullivan_County_dp05_2013 <- get_acs(geography = "county", county = "Sullivan", state = "TN", table = "DP05", year = 2013, geometry = TRUE)  
+    
+    #Washington
+    
+    #2017
+    
+    Washington_County_dp02_2017 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Washington_County_dp03_2017 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Washington_County_dp04_2017 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Washington_County_dp05_2017 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Washington_County_dp02_2016 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Washington_County_dp03_2016 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Washington_County_dp04_2016 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Washington_County_dp05_2016 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Washington_County_dp02_2015 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Washington_County_dp03_2015 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Washington_County_dp04_2015 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Washington_County_dp05_2015 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Washington_County_dp02_2014 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Washington_County_dp03_2014 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Washington_County_dp04_2014 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Washington_County_dp05_2014 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Washington_County_dp02_2013 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Washington_County_dp03_2013 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Washington_County_dp04_2013 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Washington_County_dp05_2013 <- get_acs(geography = "county", county = "Washington", state = "TN", table = "DP05", year = 2013, geometry = TRUE)
+    
+    #Unicoi
+    
+    #2017
+    
+    Unicoi_County_dp02_2017 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP02", year = 2017, geometry = TRUE)
+    
+    Unicoi_County_dp03_2017 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP03", year = 2017, geometry = TRUE)
+    
+    Unicoi_County_dp04_2017 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP04", year = 2017, geometry = TRUE)
+    
+    Unicoi_County_dp05_2017 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP05", year = 2017, geometry = TRUE)
+    
+    #2016
+    
+    Unicoi_County_dp02_2016 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP02", year = 2016, geometry = TRUE)
+    
+    Unicoi_County_dp03_2016 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP03", year = 2016, geometry = TRUE)
+    
+    Unicoi_County_dp04_2016 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP04", year = 2016, geometry = TRUE)
+    
+    Unicoi_County_dp05_2016 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP05", year = 2016, geometry = TRUE)
+    
+    #2015
+    
+    Unicoi_County_dp02_2015 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP02", year = 2015, geometry = TRUE)
+    
+    Unicoi_County_dp03_2015 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP03", year = 2015, geometry = TRUE)
+    
+    Unicoi_County_dp04_2015 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP04", year = 2015, geometry = TRUE)
+    
+    Unicoi_County_dp05_2015 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP05", year = 2015, geometry = TRUE)
+    
+    #2014
+    
+    Unicoi_County_dp02_2014 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP02", year = 2014, geometry = TRUE)
+    
+    Unicoi_County_dp03_2014 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP03", year = 2014, geometry = TRUE)
+    
+    Unicoi_County_dp04_2014 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP04", year = 2014, geometry = TRUE)
+    
+    Unicoi_County_dp05_2014 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP05", year = 2014, geometry = TRUE)
+    
+    #2013
+    
+    Unicoi_County_dp02_2013 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP02", year = 2013, geometry = TRUE)
+    
+    Unicoi_County_dp03_2013 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP03", year = 2013, geometry = TRUE)
+    
+    Unicoi_County_dp04_2013 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP04", year = 2013, geometry = TRUE)
+    
+    Unicoi_County_dp05_2013 <- get_acs(geography = "county", county = "Unicoi", state = "TN", table = "DP05", year = 2013, geometry = TRUE) 
+    
+    ###join the variable names together###
+    
+    ####2017####
+    
+    ##carter
+    
+    Carter_County_dp02_17 <- inner_join(Carter_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Carter_County_dp03_17 <- inner_join(Carter_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Carter_County_dp04_17 <- inner_join(Carter_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Carter_County_dp05_17 <- inner_join(Carter_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##carter
+    
+    Carter_County_dp02_16 <- inner_join(Carter_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Carter_County_dp03_16 <- inner_join(Carter_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Carter_County_dp04_16 <- inner_join(Carter_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Carter_County_dp05_16 <- inner_join(Carter_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##carter
+    
+    Carter_County_dp02_15 <- inner_join(Carter_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Carter_County_dp03_15 <- inner_join(Carter_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Carter_County_dp04_15 <- inner_join(Carter_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Carter_County_dp05_15 <- inner_join(Carter_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##carter
+    
+    Carter_County_dp02_14 <- inner_join(Carter_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Carter_County_dp03_14 <- inner_join(Carter_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Carter_County_dp04_14 <- inner_join(Carter_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Carter_County_dp05_14 <- inner_join(Carter_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##carter
+    
+    Carter_County_dp02_13 <- inner_join(Carter_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Carter_County_dp03_13 <- inner_join(Carter_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Carter_County_dp04_13 <- inner_join(Carter_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Carter_County_dp05_13 <- inner_join(Carter_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    
+    
+    ####2017####
+    
+    ##Greene
+    
+    Greene_County_dp02_17 <- inner_join(Greene_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Greene_County_dp03_17 <- inner_join(Greene_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Greene_County_dp04_17 <- inner_join(Greene_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Greene_County_dp05_17 <- inner_join(Greene_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Greene
+    
+    Greene_County_dp02_16 <- inner_join(Greene_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Greene_County_dp03_16 <- inner_join(Greene_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Greene_County_dp04_16 <- inner_join(Greene_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Greene_County_dp05_16 <- inner_join(Greene_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Greene
+    
+    Greene_County_dp02_15 <- inner_join(Greene_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Greene_County_dp03_15 <- inner_join(Greene_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Greene_County_dp04_15 <- inner_join(Greene_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Greene_County_dp05_15 <- inner_join(Greene_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Greene
+    
+    Greene_County_dp02_14 <- inner_join(Greene_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Greene_County_dp03_14 <- inner_join(Greene_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Greene_County_dp04_14 <- inner_join(Greene_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Greene_County_dp05_14 <- inner_join(Greene_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Greene
+    
+    Greene_County_dp02_13 <- inner_join(Greene_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Greene_County_dp03_13 <- inner_join(Greene_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Greene_County_dp04_13 <- inner_join(Greene_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Greene_County_dp05_13 <- inner_join(Greene_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####2017####
+    
+    ##Hancock
+    
+    Hancock_County_dp02_17 <- inner_join(Hancock_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp03_17 <- inner_join(Hancock_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp04_17 <- inner_join(Hancock_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp05_17 <- inner_join(Hancock_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Hancock
+    
+    Hancock_County_dp02_16 <- inner_join(Hancock_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp03_16 <- inner_join(Hancock_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp04_16 <- inner_join(Hancock_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp05_16 <- inner_join(Hancock_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Hancock
+    
+    Hancock_County_dp02_15 <- inner_join(Hancock_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp03_15 <- inner_join(Hancock_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp04_15 <- inner_join(Hancock_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp05_15 <- inner_join(Hancock_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Hancock
+    
+    Hancock_County_dp02_14 <- inner_join(Hancock_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp03_14 <- inner_join(Hancock_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp04_14 <- inner_join(Hancock_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp05_14 <- inner_join(Hancock_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Hancock
+    
+    Hancock_County_dp02_13 <- inner_join(Hancock_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp03_13 <- inner_join(Hancock_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp04_13 <- inner_join(Hancock_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Hancock_County_dp05_13 <- inner_join(Hancock_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    
+    ####2017####
+    
+    ##Hawkins
+    
+    Hawkins_County_dp02_17 <- inner_join(Hawkins_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp03_17 <- inner_join(Hawkins_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp04_17 <- inner_join(Hawkins_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp05_17 <- inner_join(Hawkins_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Hawkins
+    
+    Hawkins_County_dp02_16 <- inner_join(Hawkins_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp03_16 <- inner_join(Hawkins_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp04_16 <- inner_join(Hawkins_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp05_16 <- inner_join(Hawkins_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Hawkins
+    
+    Hawkins_County_dp02_15 <- inner_join(Hawkins_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp03_15 <- inner_join(Hawkins_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp04_15 <- inner_join(Hawkins_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp05_15 <- inner_join(Hawkins_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Hawkins
+    
+    Hawkins_County_dp02_14 <- inner_join(Hawkins_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp03_14 <- inner_join(Hawkins_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp04_14 <- inner_join(Hawkins_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp05_14 <- inner_join(Hawkins_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Hawkins
+    
+    Hawkins_County_dp02_13 <- inner_join(Hawkins_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp03_13 <- inner_join(Hawkins_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp04_13 <- inner_join(Hawkins_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Hawkins_County_dp05_13 <- inner_join(Hawkins_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####2017####
+    
+    ##Johnson
+    
+    Johnson_County_dp02_17 <- inner_join(Johnson_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp03_17 <- inner_join(Johnson_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp04_17 <- inner_join(Johnson_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp05_17 <- inner_join(Johnson_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Johnson
+    
+    Johnson_County_dp02_16 <- inner_join(Johnson_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp03_16 <- inner_join(Johnson_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp04_16 <- inner_join(Johnson_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp05_16 <- inner_join(Johnson_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Johnson
+    
+    Johnson_County_dp02_15 <- inner_join(Johnson_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp03_15 <- inner_join(Johnson_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp04_15 <- inner_join(Johnson_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp05_15 <- inner_join(Johnson_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Johnson
+    
+    Johnson_County_dp02_14 <- inner_join(Johnson_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp03_14 <- inner_join(Johnson_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp04_14 <- inner_join(Johnson_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp05_14 <- inner_join(Johnson_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Johnson
+    
+    Johnson_County_dp02_13 <- inner_join(Johnson_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp03_13 <- inner_join(Johnson_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp04_13 <- inner_join(Johnson_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Johnson_County_dp05_13 <- inner_join(Johnson_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####2017####
+    
+    ##Sullivan
+    
+    Sullivan_County_dp02_17 <- inner_join(Sullivan_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp03_17 <- inner_join(Sullivan_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp04_17 <- inner_join(Sullivan_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp05_17 <- inner_join(Sullivan_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Sullivan
+    
+    Sullivan_County_dp02_16 <- inner_join(Sullivan_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp03_16 <- inner_join(Sullivan_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp04_16 <- inner_join(Sullivan_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp05_16 <- inner_join(Sullivan_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Sullivan
+    
+    Sullivan_County_dp02_15 <- inner_join(Sullivan_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp03_15 <- inner_join(Sullivan_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp04_15 <- inner_join(Sullivan_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp05_15 <- inner_join(Sullivan_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Sullivan
+    
+    Sullivan_County_dp02_14 <- inner_join(Sullivan_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp03_14 <- inner_join(Sullivan_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp04_14 <- inner_join(Sullivan_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp05_14 <- inner_join(Sullivan_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Sullivan
+    
+    Sullivan_County_dp02_13 <- inner_join(Sullivan_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp03_13 <- inner_join(Sullivan_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp04_13 <- inner_join(Sullivan_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Sullivan_County_dp05_13 <- inner_join(Sullivan_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####2017####
+    
+    ##Washington
+    
+    Washington_County_dp02_17 <- inner_join(Washington_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Washington_County_dp03_17 <- inner_join(Washington_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Washington_County_dp04_17 <- inner_join(Washington_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Washington_County_dp05_17 <- inner_join(Washington_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Washington
+    
+    Washington_County_dp02_16 <- inner_join(Washington_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Washington_County_dp03_16 <- inner_join(Washington_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Washington_County_dp04_16 <- inner_join(Washington_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Washington_County_dp05_16 <- inner_join(Washington_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Washington
+    
+    Washington_County_dp02_15 <- inner_join(Washington_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Washington_County_dp03_15 <- inner_join(Washington_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Washington_County_dp04_15 <- inner_join(Washington_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Washington_County_dp05_15 <- inner_join(Washington_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Washington
+    
+    Washington_County_dp02_14 <- inner_join(Washington_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Washington_County_dp03_14 <- inner_join(Washington_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Washington_County_dp04_14 <- inner_join(Washington_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Washington_County_dp05_14 <- inner_join(Washington_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Washington
+    
+    Washington_County_dp02_13 <- inner_join(Washington_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Washington_County_dp03_13 <- inner_join(Washington_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Washington_County_dp04_13 <- inner_join(Washington_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Washington_County_dp05_13 <- inner_join(Washington_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####2017####
+    
+    ##Unicoi
+    
+    Unicoi_County_dp02_17 <- inner_join(Unicoi_County_dp02_2017, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp03_17 <- inner_join(Unicoi_County_dp03_2017, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp04_17 <- inner_join(Unicoi_County_dp04_2017, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp05_17 <- inner_join(Unicoi_County_dp05_2017, dp_table_variables, by = "variable")
+    
+    ####2016####
+    
+    ##Unicoi
+    
+    Unicoi_County_dp02_16 <- inner_join(Unicoi_County_dp02_2016, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp03_16 <- inner_join(Unicoi_County_dp03_2016, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp04_16 <- inner_join(Unicoi_County_dp04_2016, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp05_16 <- inner_join(Unicoi_County_dp05_2016, dp_table_variables, by = "variable")
+    
+    ####2015####
+    
+    ##Unicoi
+    
+    Unicoi_County_dp02_15 <- inner_join(Unicoi_County_dp02_2015, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp03_15 <- inner_join(Unicoi_County_dp03_2015, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp04_15 <- inner_join(Unicoi_County_dp04_2015, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp05_15 <- inner_join(Unicoi_County_dp05_2015, dp_table_variables, by = "variable")
+    
+    ####2014####
+    
+    ##Unicoi
+    
+    Unicoi_County_dp02_14 <- inner_join(Unicoi_County_dp02_2014, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp03_14 <- inner_join(Unicoi_County_dp03_2014, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp04_14 <- inner_join(Unicoi_County_dp04_2014, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp05_14 <- inner_join(Unicoi_County_dp05_2014, dp_table_variables, by = "variable")
+    
+    ####2013####
+    
+    ##Unicoi
+    
+    Unicoi_County_dp02_13 <- inner_join(Unicoi_County_dp02_2013, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp03_13 <- inner_join(Unicoi_County_dp03_2013, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp04_13 <- inner_join(Unicoi_County_dp04_2013, dp_table_variables, by = "variable")
+    
+    Unicoi_County_dp05_13 <- inner_join(Unicoi_County_dp05_2013, dp_table_variables, by = "variable")
+    
+    ####combine all the counties into their respective data tables####
+    
+    
+    #2017
+    
+    County_dp02_17 <- rbind(Carter_County_dp02_17, Greene_County_dp02_17, Hancock_County_dp02_17, Hawkins_County_dp02_17, Johnson_County_dp02_17, Sullivan_County_dp02_17, Washington_County_dp02_17, Unicoi_County_dp02_17)
+    
+    County_dp03_17 <- rbind(Carter_County_dp03_17, Greene_County_dp03_17, Hancock_County_dp03_17, Hawkins_County_dp03_17, Johnson_County_dp03_17, Sullivan_County_dp03_17, Washington_County_dp03_17, Unicoi_County_dp03_17)
+    
+    County_dp04_17 <- rbind(Carter_County_dp04_17, Greene_County_dp04_17, Hancock_County_dp04_17, Hawkins_County_dp04_17, Johnson_County_dp04_17, Sullivan_County_dp04_17, Washington_County_dp04_17, Unicoi_County_dp04_17)
+    
+    County_dp05_17 <- rbind(Carter_County_dp05_17, Greene_County_dp05_17, Hancock_County_dp05_17, Hawkins_County_dp05_17, Johnson_County_dp05_17, Sullivan_County_dp05_17, Washington_County_dp05_17, Unicoi_County_dp05_17)
+    
+    #2016
+    
+    County_dp02_16 <- rbind(Carter_County_dp02_16, Greene_County_dp02_16, Hancock_County_dp02_16, Hawkins_County_dp02_16, Johnson_County_dp02_16, Sullivan_County_dp02_16, Washington_County_dp02_16, Unicoi_County_dp02_16)
+    
+    County_dp03_16 <- rbind(Carter_County_dp03_16, Greene_County_dp03_16, Hancock_County_dp03_16, Hawkins_County_dp03_16, Johnson_County_dp03_16, Sullivan_County_dp03_16, Washington_County_dp03_16, Unicoi_County_dp03_16)
+    
+    County_dp04_16 <- rbind(Carter_County_dp04_16, Greene_County_dp04_16, Hancock_County_dp04_16, Hawkins_County_dp04_16, Johnson_County_dp04_16, Sullivan_County_dp04_16, Washington_County_dp04_16, Unicoi_County_dp04_16)
+    
+    County_dp05_16 <- rbind(Carter_County_dp05_16, Greene_County_dp05_16, Hancock_County_dp05_16, Hawkins_County_dp05_16, Johnson_County_dp05_16, Sullivan_County_dp05_16, Washington_County_dp05_16, Unicoi_County_dp05_16)
+    
+    #2015
+    
+    County_dp02_15 <- rbind(Carter_County_dp02_15, Greene_County_dp02_15, Hancock_County_dp02_15, Hawkins_County_dp02_15, Johnson_County_dp02_15, Sullivan_County_dp02_15, Washington_County_dp02_15, Unicoi_County_dp02_15)
+    
+    County_dp03_15 <- rbind(Carter_County_dp03_15, Greene_County_dp03_15, Hancock_County_dp03_15, Hawkins_County_dp03_15, Johnson_County_dp03_15, Sullivan_County_dp03_15, Washington_County_dp03_15, Unicoi_County_dp03_15)
+    
+    County_dp04_15 <- rbind(Carter_County_dp04_15, Greene_County_dp04_15, Hancock_County_dp04_15, Hawkins_County_dp04_15, Johnson_County_dp04_15, Sullivan_County_dp04_15, Washington_County_dp04_15, Unicoi_County_dp04_15)
+    
+    County_dp05_15 <- rbind(Carter_County_dp05_15, Greene_County_dp05_15, Hancock_County_dp05_15, Hawkins_County_dp05_15, Johnson_County_dp05_15, Sullivan_County_dp05_15, Washington_County_dp05_15, Unicoi_County_dp05_15)
+    
+    #2014
+    
+    County_dp02_14 <- rbind(Carter_County_dp02_14, Greene_County_dp02_14, Hancock_County_dp02_14, Hawkins_County_dp02_14, Johnson_County_dp02_14, Sullivan_County_dp02_14, Washington_County_dp02_14, Unicoi_County_dp02_14)
+    
+    County_dp03_14 <- rbind(Carter_County_dp03_14, Greene_County_dp03_14, Hancock_County_dp03_14, Hawkins_County_dp03_14, Johnson_County_dp03_14, Sullivan_County_dp03_14, Washington_County_dp03_14, Unicoi_County_dp03_14)
+    
+    County_dp04_14 <- rbind(Carter_County_dp04_14, Greene_County_dp04_14, Hancock_County_dp04_14, Hawkins_County_dp04_14, Johnson_County_dp04_14, Sullivan_County_dp04_14, Washington_County_dp04_14, Unicoi_County_dp04_14)
+    
+    County_dp05_14 <- rbind(Carter_County_dp05_14, Greene_County_dp05_14, Hancock_County_dp05_14, Hawkins_County_dp05_14, Johnson_County_dp05_14, Sullivan_County_dp05_14, Washington_County_dp05_14, Unicoi_County_dp05_14)
+    
+    #2013
+    
+    County_dp02_13 <- rbind(Carter_County_dp02_13, Greene_County_dp02_13, Hancock_County_dp02_13, Hawkins_County_dp02_13, Johnson_County_dp02_13, Sullivan_County_dp02_13, Washington_County_dp02_13, Unicoi_County_dp02_13)
+    
+    County_dp03_13 <- rbind(Carter_County_dp03_13, Greene_County_dp03_13, Hancock_County_dp03_13, Hawkins_County_dp03_13, Johnson_County_dp03_13, Sullivan_County_dp03_13, Washington_County_dp03_13, Unicoi_County_dp03_13)
+    
+    County_dp04_13 <- rbind(Carter_County_dp04_13, Greene_County_dp04_13, Hancock_County_dp04_13, Hawkins_County_dp04_13, Johnson_County_dp04_13, Sullivan_County_dp04_13, Washington_County_dp04_13, Unicoi_County_dp04_13)
+    
+    County_dp05_13 <- rbind(Carter_County_dp05_13, Greene_County_dp05_13, Hancock_County_dp05_13, Hawkins_County_dp05_13, Johnson_County_dp05_13, Sullivan_County_dp05_13, Washington_County_dp05_13, Unicoi_County_dp05_13)
+    
+    #2017#
+    
+    County_dp_2017 <- rbind(County_dp02_17, County_dp03_17, County_dp04_17, County_dp05_17)
+    
+    year <- rep(2017, length(County_dp_2017$NAME))
+    
+    County_dp_2017 <- cbind(year, County_dp_2017)
+    
+    #2016  
+    
+    County_dp_2016 <- rbind(County_dp02_16, County_dp03_16, County_dp04_16, County_dp05_16)
+    
+    year <- rep(2016, length(County_dp_2016$NAME))
+    
+    County_dp_2016 <- cbind(year, County_dp_2016)
+    
+    #2015
+    
+    County_dp_2015 <- rbind(County_dp02_15, County_dp03_15, County_dp04_15, County_dp05_15)
+    
+    year <- rep(2015, length(County_dp_2015$NAME))
+    
+    County_dp_2015 <- cbind(year, County_dp_2015)
+    
+    #2014
+    
+    County_dp_2014 <- rbind(County_dp02_14, County_dp03_14, County_dp04_14, County_dp05_14)
+    
+    year <- rep(2014, length(County_dp_2014$NAME))
+    
+    County_dp_2014 <- cbind(year, County_dp_2014)
+    
+    #2013
+    
+    County_dp_2013 <- rbind(County_dp02_13, County_dp03_13, County_dp04_13, County_dp05_13)
+    
+    year <- rep(2013, length(County_dp_2013$NAME))
+    
+    County_dp_2013 <- cbind(year, County_dp_2013)
+    
+    ###combine it all into a county level data profile
+    
+    County_data_profile <- rbind(County_dp_2017, County_dp_2016, County_dp_2015, County_dp_2014, County_dp_2013)
+    
+    
+    
+    
+    
+    
+    
+        
 ####now actually play with the data####
 
     data_profile %>%
